@@ -6,6 +6,7 @@
 
 #define BUFFER_SIZE 32767
 #define NUM_SOLDIERS 100
+#define LOOP_SOLDIERS 101
 
 int main(int argc, char **argv) {
     int army_w[NUM_ARMIES];
@@ -27,26 +28,26 @@ int main(int argc, char **argv) {
     int rr = 0;
     long long count = 0;
 
-    for (ii = 0; ii < NUM_SOLDIERS; ii++) {
+    for (ii = 0; ii < LOOP_SOLDIERS; ii++) {
         int arm = ii;
         printf("ii = %d\n", ii);
-        for (jj = 0; jj + arm < NUM_SOLDIERS; jj++) {
+        for (jj = 0; jj + arm < LOOP_SOLDIERS; jj++) {
             printf(" jj = %d\n", jj);
             arm += jj;
-            for (kk = 0; kk + arm < NUM_SOLDIERS; kk++) {
+            for (kk = 0; kk + arm < LOOP_SOLDIERS; kk++) {
                 printf(" kk = %d count %ld\n", kk, count);
                 arm += kk;
-                for (ll = 0; ll + arm < NUM_SOLDIERS; ll++) {
+                for (ll = 0; ll + arm < LOOP_SOLDIERS; ll++) {
                     arm += ll;
-                    for (mm = 0; mm + arm < NUM_SOLDIERS; mm++) {
+                    for (mm = 0; mm + arm < LOOP_SOLDIERS; mm++) {
                         arm += mm;
-                        for (nn = 0; nn + arm < NUM_SOLDIERS; nn++) {
+                        for (nn = 0; nn + arm < LOOP_SOLDIERS; nn++) {
                             arm += nn;
-                            for (oo = 0; oo + arm < NUM_SOLDIERS; oo++) {
+                            for (oo = 0; oo + arm < LOOP_SOLDIERS; oo++) {
                                 arm += oo;
-                                for (pp = 0; pp + arm < NUM_SOLDIERS; pp++) {
+                                for (pp = 0; pp + arm < LOOP_SOLDIERS; pp++) {
                                     arm += pp;
-                                    for (qq = 0; qq + arm < NUM_SOLDIERS; qq++) {
+                                    for (qq = 0; qq + arm < LOOP_SOLDIERS; qq++) {
                                         arm += qq;
                                         rr = 100 - arm;
                                         count++;
